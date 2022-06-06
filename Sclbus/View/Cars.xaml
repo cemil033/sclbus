@@ -1,0 +1,76 @@
+﻿<Page x:Class="Sclbus.View.Cars"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sclbus" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="1280"
+      Title="Cars"
+      Background="White"
+      Loaded="Page_Loaded"
+      >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="11*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button Margin="20" Width="100" Click="Button_Click">+</Button>
+            <materialDesign:ColorZone
+                Mode="Standard"
+                Padding="8 4 8 4"
+                CornerRadius="2"
+                Panel.ZIndex="1"
+                Margin="20"
+                materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                <Grid Width="550">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                             Width="*" />
+                        <ColumnDefinition
+                             Width="10*" />
+                       
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        Click="Button_Click_4"
+                        Style="{StaticResource MaterialDesignToolButton}">
+                        <materialDesign:PackIcon
+                             Kind="Search"
+                             Opacity=".56" />
+                    </Button>
+                    <TextBox
+                        Name="tb_src"
+                        Grid.Column="1"
+                        Margin="8 0 0 0"
+                        materialDesign:HintAssist.Hint="Search"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        BorderThickness="0"
+                        MinWidth="200"
+                        VerticalAlignment="Center" />                    
+                </Grid>
+            </materialDesign:ColorZone>
+        </StackPanel>   
+        <ListView Name="lwcr" Grid.Row="1" FontSize="26" ItemsSource="{Binding}" >
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn x:Name="dfl" Header="Driver FullName" Width="300" DisplayMemberBinding="{Binding Path= Driver, UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>
+                    <GridViewColumn x:Name="title" Header="Name" Width="260" DisplayMemberBinding="{Binding Path= Title, UpdateSourceTrigger=PropertyChanged}" ></GridViewColumn>
+                    <GridViewColumn x:Name="numb" Header="Number" Width="220" DisplayMemberBinding="{Binding Path= Number, UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>
+                    <GridViewColumn  Header="Seat Count" Width="200" DisplayMemberBinding="{Binding Path=SeatCount, UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>                    
+                    <GridViewColumn Header="Action" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btn_upd"  Click="Button_Click_1" Width="80">Update</Button>
+                                    <Button x:Name="btn_dlt"  Click="Button_Click_2" Width="80">Delete</Button>
+                                </StackPanel>                                
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

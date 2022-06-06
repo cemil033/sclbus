@@ -1,0 +1,34 @@
+﻿<Window x:Class="Sclbus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sclbus"
+        WindowState="Maximized"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="960" Width="1600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0"></Image>
+            <StackPanel Grid.Row="1">
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_6">Create ride</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_7">Rides</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_5">Class</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_4">Student</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_3">Parent</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_2">Driver</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click_1">Car</Button>
+                <Button Width="200" Height="60" FontSize="26" Margin="20,20,20,15" Click="Button_Click" >Holidays</Button>
+            </StackPanel>
+        </Grid>
+        <Frame x:Name="frm1" Grid.Column="1"></Frame>
+    </Grid>
+</Window>

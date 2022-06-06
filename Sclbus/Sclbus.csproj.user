@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AddGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddRide.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Groups.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Rides.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddDriver.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddParent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddRide.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddStudent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Cars.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Drivers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Groups.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Holidays.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Parents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Rides.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Students.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

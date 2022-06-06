@@ -1,0 +1,87 @@
+﻿<Window x:Class="Sclbus.AddDriver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sclbus"
+        mc:Ignorable="d"
+        Title="AddDriver" Height="900" Width="800"
+        Loaded="Window_Loaded"
+        >
+    <Grid>
+        <StackPanel>
+            <TextBox
+                Name="tb_fn"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">FirstName</TextBox>
+            <TextBox
+                Name="tb_ln"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" >LastName</TextBox>
+            <TextBox
+                Name="tb_phn"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" >Phone</TextBox>
+            <TextBox
+                Name="tb_un"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" >Username</TextBox>
+            <TextBox
+                Name="tb_psw"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" >Password</TextBox>
+            <ComboBox 
+                Name="cb_cars"                   
+                DisplayMemberPath="{Binding Car.Title}"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"></ComboBox>            
+            <TextBox
+                Name="tb_ls"
+                Margin="20"
+                Width="360"
+                Background="WhiteSmoke"
+                BorderThickness="4"
+                BorderBrush="CornflowerBlue"
+                FontSize="26"                
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" >License</TextBox>
+            <Button Margin="60" FontSize="26" Width="250" Height="80" Click="Button_Click">Create</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Page x:Class="Sclbus.View.Holidays"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sclbus"
+      mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="1280"
+      Title="Holidays"
+      Background="White"
+      >
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Calendar Name="clndr"  Width="600" Height="400" SelectionMode="MultipleRange" SelectedDatesChanged="clndr_SelectedDatesChanged"></Calendar>
+    </Grid>
+</Page>
